@@ -1,0 +1,25 @@
+interface User{
+    username_U:string,
+    role_U:string
+};
+
+interface Admin{
+    username_A:string,
+    role_A:string
+};
+
+type AdminUser = Admin & User;
+
+function printOutput(adminUser : AdminUser) : void{
+    console.log("User Username : " + adminUser.username_U + " and User Role: " + adminUser.role_U);
+    console.log("Admin Username :" + adminUser.username_A + " and Admin Role: " + adminUser.role_A);
+};
+
+const adminUser: AdminUser = {
+    username_U: "Bhuvan",
+    role_U: "Trainee",
+    username_A: "Hemraj",
+    role_A: "Mentor"
+};
+
+printOutput(adminUser);
