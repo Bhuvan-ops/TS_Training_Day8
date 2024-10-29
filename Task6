@@ -1,0 +1,9 @@
+function convertToUppercase(x: unknown): string {
+    if (typeof x === "string") {
+        return (x as string).toUpperCase();
+    }else{
+    return ("Its not a string");
+    }
+}
+console.log(convertToUppercase("Bhuvan"))
+console.log(convertToUppercase(123))
