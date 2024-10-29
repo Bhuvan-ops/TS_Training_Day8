@@ -1,0 +1,12 @@
+interface Person{
+    name:string,
+    age:number,
+    email?:string
+}
+
+function greetPerson(person:Person):string{
+    return (`Hello ${person.name}!`);
+}
+
+const person: Person = { name: "Bhuvan", age: 22 };
+console.log(greetPerson(person));
