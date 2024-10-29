@@ -1,0 +1,18 @@
+type Status = "active" | "inactive" | "pending";
+
+function getStatusMessage(status: Status): string {
+    switch (status) {
+        case "active":
+            return "The status is active.";
+        case "inactive":
+            return "The status is inactive.";
+        case "pending":
+            return "The status is pending.";
+        default:
+            return "Unknown status.";
+    }
+}
+
+console.log(getStatusMessage("active"));
+console.log(getStatusMessage("inactive"));
+console.log(getStatusMessage("pending"));
